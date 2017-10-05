@@ -1,0 +1,2 @@
+class Suplement < ApplicationRecord
+end

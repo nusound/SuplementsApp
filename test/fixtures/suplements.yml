@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  number_of_units: 1
+  daily_dosage_in_units: 1
+  start_date: 2017-10-05
+  end_date: 2017-10-05
+  suplement_cost: 1.5
+  total_cost: 1.5
+
+two:
+  name: MyString
+  number_of_units: 1
+  daily_dosage_in_units: 1
+  start_date: 2017-10-05
+  end_date: 2017-10-05
+  suplement_cost: 1.5
+  total_cost: 1.5
