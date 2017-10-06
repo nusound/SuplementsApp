@@ -1,0 +1,2 @@
+module SuplementsHelper
+end
