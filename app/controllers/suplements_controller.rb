@@ -1,4 +1,6 @@
 class SuplementsController < ApplicationController
+  before_action :set_suplement, only: [:show, :edit, :update, :destroy]
+
   def index
     @suplement = Suplement.all
   end
@@ -17,22 +19,29 @@ class SuplementsController < ApplicationController
   end
 
   def show
-    @suplement = Suplement.find(params[:id])
   end
 
   def edit
-    @suplement = Suplement.find(params[:id])
   end
 
   def update
-
+    if @suplement.update(suplement_params)
+      redirect_to '/suplements'
+    else
+      redirect_to '/suplements/new'
+    end
   end
 
   def destroy
-
+    @suplement.destroy(suplement_params)
+      redirect_to '/suplements'
   end
 
   private
+
+    def set_suplement
+      @suplement = Suplement.find(params[:id])
+    end
 
     def suplement_params
       params.require(:suplement).permit(:name,

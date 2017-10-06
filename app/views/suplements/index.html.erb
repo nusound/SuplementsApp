@@ -1,11 +1,13 @@
 <h1>This is the view coming from Suplements controller index method</h1>
 
 <body>
+
   <%= @suplement.each do |suplement| %>
 
   <% end %>
   <br>
   <a href="/suplements/:id">Show</a>
-  <a href="/suplements/new">New suplement</a>
-  <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
+  <%= link_to 'Create new item', new_suplement_url %>
+
+
 </body>
