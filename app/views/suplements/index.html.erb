@@ -1,13 +1,10 @@
-<h1>This is the view coming from Suplements controller index method</h1>
+<h1>My Suplements</h1>
 
-<body>
+<%= link_to "Create New Item", new_suplement_url %>
 
-  <%= @suplement.each do |suplement| %>
+<%= @suplement.each do |suplement| %>
+  <p><%= link_to suplement.name, suplement_path(@suplement) %></p>
 
-  <% end %>
-  <br>
-  <a href="/suplements/:id">Show</a>
-  <%= link_to 'Create new item', new_suplement_url %>
-
-
-</body>
+  <%= link_to "Edit", edit_suplement_path(suplement) %>
+  <%= link_to 'Delete Portfolio Item', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

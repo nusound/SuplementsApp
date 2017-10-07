@@ -1,4 +1,4 @@
-<h1>Show page for suplement</h1>
+<h1><%= @suplement.name %> show page</h1>
 
 <%= form_for(@suplement) do |f| %>
 
@@ -42,6 +42,6 @@
   </div>
 
     <%= link_to "Edit item", edit_suplement_path(@suplement.id) %>
-  <%= link_to 'Delete item', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Delete item', suplement_path(@suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
