@@ -3,8 +3,8 @@
 <%= link_to "Create New Item", new_suplement_url %>
 
 <%= @suplement.each do |suplement| %>
-  <p><%= link_to suplement.name, suplement_path(@suplement) %></p>
+  <p><%= link_to suplement.name, suplement_path(suplement) %></p>
 
   <%= link_to "Edit", edit_suplement_path(suplement) %>
-  <%= link_to 'Delete Portfolio Item', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
