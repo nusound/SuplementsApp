@@ -10,12 +10,12 @@ class SuplementsController < ApplicationController
   end
 
   def create
-    @suplement = current_user.suplements.build(suplement_params)
+    @suplement = Suplement.new(suplement_params)
     if @suplement.save
         redirect_to '/suplements'
-      else
-        render '/suplements/new'
-      end
+    else
+      render '/suplements/new'
+    end
   end
 
   def show
@@ -33,7 +33,7 @@ class SuplementsController < ApplicationController
   end
 
   def destroy
-    @suplement.destroy(suplement_params)
+    @suplement.destroy
       redirect_to '/suplements'
   end
 
@@ -47,8 +47,7 @@ class SuplementsController < ApplicationController
       params.require(:suplement).permit(:name,
                                         :number_of_units,
                                         :daily_dosage_in_units,
-                                        :start_date,
-                                        :end_date,
+                                        :number_of_days,
                                         :suplement_cost
                                         )
     end

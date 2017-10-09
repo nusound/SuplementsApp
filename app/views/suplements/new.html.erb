@@ -4,12 +4,6 @@
 
   <%= render 'form', suplement: @suplement %>
 
-  <div class="field">
-    <%= f.label :total_cost %>
-    <%= f.text_area :total_cost %>
-  </div>
+  <input type="submit" name="commit" value="Create Suplement" data-disable-with="Create Suplement">
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
