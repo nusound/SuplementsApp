@@ -4,6 +4,11 @@
 
   <%= render 'form', suplement: @suplement %>
 
+  <div class="field">
+    <%= f.label :total_cost %>
+    <%= f.text_area :total_cost %>
+  </div>
+
   <%= link_to "Edit item", edit_suplement_path(@suplement.id) %>
   <%= link_to 'Delete item', suplement_path(@suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>

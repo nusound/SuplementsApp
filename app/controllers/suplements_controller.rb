@@ -2,7 +2,7 @@ class SuplementsController < ApplicationController
   before_action :set_suplement, only: [:show, :edit, :update, :destroy]
 
   def index
-    @suplement = Suplement.all
+    @suplement = Suplement.where(user_id: current_user)
   end
 
   def new
@@ -14,7 +14,7 @@ class SuplementsController < ApplicationController
     if @suplement.save
         redirect_to '/suplements'
       else
-        redirect_to '/suplements/new'
+        render '/suplements/new'
       end
   end
 
