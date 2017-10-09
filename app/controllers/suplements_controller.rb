@@ -6,11 +6,11 @@ class SuplementsController < ApplicationController
   end
 
   def new
-    @suplement = Suplement.new
+    @suplement = current_user.suplements.build
   end
 
   def create
-    @suplement = Suplement.new(suplement_params)
+    @suplement = current_user.suplements.build(suplement_params)
     if @suplement.save
         redirect_to '/suplements'
       else
