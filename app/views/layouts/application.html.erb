@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <div>
+      <div><%= link_to 'Home', pages_home_path %></div>
+    <div><%= link_to 'About', pages_about_path %></div>
+    <div><%= link_to 'Contact', pages_contact_path %></div>
+    </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <% if current_user %>
       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
@@ -16,9 +24,6 @@
       <%= link_to 'Register', new_user_registration_path %>
       <%= link_to 'Login', new_user_session_path %>
     <% end %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
     <%= yield %>
   </body>
