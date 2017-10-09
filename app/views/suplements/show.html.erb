@@ -2,46 +2,9 @@
 
 <%= form_for(@suplement) do |f| %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <%= render 'form', suplement: @suplement %>
 
-  <div class="field">
-    <%= f.label :number_of_units %>
-    <%= f.text_field :number_of_units %>
-  </div>
-
-  <div class="field">
-    <%= f.label :daily_dosage_in_units %>
-    <%= f.text_area :daily_dosage_in_units %>
-  </div>
-
-  <div class="field">
-    <%= f.label :start_date %>
-    <%= f.text_area :start_date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :end_date %>
-    <%= f.text_area :end_date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :suplement_cost %>
-    <%= f.text_area :suplement_cost %>
-  </div>
-
-  <div class="field">
-    <%= f.label :total_cost %>
-    <%= f.text_area :total_cost %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-
-    <%= link_to "Edit item", edit_suplement_path(@suplement.id) %>
+  <%= link_to "Edit item", edit_suplement_path(@suplement.id) %>
   <%= link_to 'Delete item', suplement_path(@suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 

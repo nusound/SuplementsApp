@@ -1,10 +1,10 @@
 <h1>My Suplements</h1>
 
-<%= link_to "Create New Item", new_suplement_url %>
+  <%= if @suplement.each do |suplement| %>
 
-<%= @suplement.each do |suplement| %>
-  <p><%= link_to suplement.name, suplement_path(suplement) %></p>
+    <p><%= link_to suplement.name, suplement_path(suplement) %></p>
 
-  <%= link_to "Edit", edit_suplement_path(suplement) %>
-  <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+    <%= link_to "Edit", edit_suplement_path(suplement) %>
+    <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <% end %>

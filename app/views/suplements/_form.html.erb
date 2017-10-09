@@ -1,0 +1,45 @@
+<%= form_for(suplement) do |f| %>
+  <% if suplement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(suplement.errors.count, "error") %> prohibited this suplement from being saved:</h2>
+
+      <ul>
+      <% suplement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number_of_units %>
+    <%= f.text_field :number_of_units %>
+  </div>
+
+  <div class="field">
+    <%= f.label :daily_dosage_in_units %>
+    <%= f.text_area :daily_dosage_in_units %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.text_area :start_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.text_area :end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :suplement_cost %>
+    <%= f.text_area :suplement_cost %>
+  </div>
+
+<% end %>
