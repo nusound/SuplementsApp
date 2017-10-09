@@ -5,6 +5,10 @@
   <%= render 'form', suplement: @suplement %>
 
   <div class="field">
+
+    <% @total_cost = :(@number_of_days * :daily_dosage_in_units * (:suplement_cost / :number_of_units) %>
+
+
     <%= f.label :total_cost %>
     <%= f.text_area :total_cost %>
   </div>
