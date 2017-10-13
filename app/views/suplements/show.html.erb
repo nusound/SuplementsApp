@@ -2,8 +2,6 @@
 
 <%= form_for(@suplement) do |f| %>
 
-  <%= render 'form', suplement: @suplement %>
-
   <div class="field">
 
     <% @suplement.total_cost = @suplement.number_of_days * @suplement.daily_dosage_in_units * (@suplement.suplement_cost / @suplement.number_of_units) %>

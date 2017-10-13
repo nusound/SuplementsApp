@@ -1,16 +1,17 @@
 class SuplementsController < ApplicationController
   before_action :set_suplement, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
-    @suplement = Suplement.where(user_id: current_user)
+    @suplement = Suplement.all.order("created_at DESC")
   end
 
   def new
-    @suplement = current_user.suplements.build
+    @suplement = Suplement.new
   end
 
   def create
-    @suplement = Suplement.new(suplement_params)
+    @suplement = current_user.suplements.build(suplement_params)
     if @suplement.save
         redirect_to '/suplements'
     else
