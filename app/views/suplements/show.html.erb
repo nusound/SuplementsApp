@@ -2,14 +2,12 @@
 
 <%= form_for(@suplement) do |f| %>
 
-  <div class="field">
-
-    <% @suplement.total_cost = @suplement.number_of_days * @suplement.daily_dosage_in_units * (@suplement.suplement_cost / @suplement.number_of_units) %>
-
-
-    <%= f.label :total_cost %>
-    <%= f.text_area :total_cost %>
-  </div>
+  <div> Name: <%= @suplement.name %></div>
+  <div> Number of units: <%= @suplement.number_of_units %></div>
+  <div>Daily dosage in units: <%= @suplement.daily_dosage_in_units %></div>
+  <div>Number of days: <%= @suplement.number_of_days %></div>
+  <div>Supplement cost: <%= @suplement.suplement_cost %></div>
+  <div>Total cost: <%= @suplement.total_cost %></div>
 
   <%= link_to "Edit item", edit_suplement_path(@suplement.id) %>
   <%= link_to 'Delete item', suplement_path(@suplement), method: :delete, data: { confirm: 'Are you sure?' } %>

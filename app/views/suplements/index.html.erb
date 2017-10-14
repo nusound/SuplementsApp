@@ -1,8 +1,15 @@
-<h1>My Suplements</h1>
+<h1>My Supplements</h1>
 
   <%= if @suplement.each do |suplement| %>
 
     <p><%= link_to suplement.name, suplement_path(suplement) %></p>
+
+    <div> Name: <%= suplement.name %></div>
+    <div> Number of units: <%= suplement.number_of_units %></div>
+    <div>Daily dosage in units: <%= suplement.daily_dosage_in_units %></div>
+    <div>Number of days: <%= suplement.number_of_days %></div>
+    <div>Supplement cost: <%= suplement.suplement_cost %></div>
+    <div>Total cost: <%= suplement.total_cost %></div>
 
     <%= link_to "Edit", edit_suplement_path(suplement) %>
     <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
