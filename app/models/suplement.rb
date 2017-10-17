@@ -1,5 +1,6 @@
 class Suplement < ApplicationRecord
   belongs_to :user
+
   validates :name,
             :number_of_units,
             :daily_dosage_in_units,
