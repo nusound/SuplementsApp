@@ -9,17 +9,14 @@
   </head>
 
   <body>
-    <div>
-    <div><%= link_to 'Home', pages_home_path %></div>
-    <div><%= link_to 'About', pages_about_path %></div>
-    <div><%= link_to 'Contact', pages_contact_path %></div>
+
+    <div class="container">
+      <div class="row">
+        <%= render "shared/nav" %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+      <%= yield %>
     </div>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= login_helper %>
-
-    <%= yield %>
   </body>
 </html>
