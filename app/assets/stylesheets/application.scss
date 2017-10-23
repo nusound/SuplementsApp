@@ -13,12 +13,27 @@
  */
 @import "bootstrap";
 
-#helper a {
+body {
+  background-image: url(/assets/2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
   color: black;
+}
+
+#helper a {
+  color: #f2f1cb;
 }
 
 .row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
+}
+
+nav.navbar {
+  background: #273259
+}
+
+.navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: white;
 }

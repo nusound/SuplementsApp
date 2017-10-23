@@ -9,14 +9,23 @@
   </head>
 
   <body>
-
+    <%= render "shared/nav" %>
     <div class="container">
       <div class="row">
-        <%= render "shared/nav" %>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
       </div>
+
       <%= yield %>
+
+      <div>
+        <% if current_user %>
+        <%= link_to "My Supplements", suplements_path(:user_id => current_user.id) %>
+        <% else %>
+        <%= link_to "Create Your Supplement", new_suplement_path %>
+        <% end %>
+      </div>
+
     </div>
   </body>
 </html>
