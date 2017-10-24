@@ -2,19 +2,43 @@
 
   <%= if @suplement.each do |suplement| %>
 
-    <p><%= link_to suplement.name, suplement_path(suplement) %></p>
+  <p><%= link_to suplement.name, suplement_path(suplement) %></p>
 
-    <div> Name: <%= suplement.name %></div>
-    <div> Number of units: <%= suplement.number_of_units %></div>
-    <div>Daily dosage in units: <%= suplement.daily_dosage_in_units %></div>
-    <div>Number of days: <%= suplement.number_of_days %></div>
-    <div>Supplement cost: <%= suplement.suplement_cost %></div>
-    <div>Total cost: <%= suplement.total_cost %></div>
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td>Name:</td>
+        <td><%= suplement.name %></td>
+      </tr>
+      <tr>
+        <td>Number of units:</td>
+        <td><%= suplement.number_of_units %></td>
+      </tr>
+      <tr>
+        <td>Daily dosage in units:</td>
+        <td><%= suplement.daily_dosage_in_units %></td>
+      </tr>
+      <tr>
+        <td>Number of days:</td>
+        <td><%= suplement.number_of_days %></td>
+      </tr>
+      <tr>
+        <td>Supplement cost:</td>
+        <td><%= suplement.suplement_cost %></td>
+      </tr>
+      <tr>
+        <td>Total cost:</td>
+        <td><%= suplement.total_cost %></td>
+      </tr>
+    </tbody>
+  </table>
 
-    <%= link_to "Edit", edit_suplement_path(suplement) %>
-    <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+  <%= link_to "Edit", edit_suplement_path(suplement) %>
+  <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+
+  <div>
+    <%= link_to "Create New Supplement", new_suplement_path %>
     <% end %>
-    <div>
-      <%= link_to "Create New Supplement", new_suplement_path %>
-      <% end %>
-    </div>
+  </div>

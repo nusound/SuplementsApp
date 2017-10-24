@@ -14,20 +14,16 @@
 @import "bootstrap";
 
 body {
-  background-image: url(/assets/2.jpg);
+  background-image: url(/assets/4.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   color: #273259;
+  text-align: justify;
+
 }
 
 #helper a {
   color: #f2f1cb;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
 }
 
 nav.navbar {

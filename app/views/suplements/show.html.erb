@@ -1,15 +1,8 @@
 <h1><%= @suplement.name %> show page</h1>
 
-<%= form_for(@suplement) do |f| %>
-
-  <div> Name: <%= @suplement.name %></div>
-  <div> Number of units: <%= @suplement.number_of_units %></div>
-  <div>Daily dosage in units: <%= @suplement.daily_dosage_in_units %></div>
-  <div>Number of days: <%= @suplement.number_of_days %></div>
-  <div>Supplement cost: <%= @suplement.suplement_cost %></div>
-  <div>Total cost: <%= @suplement.total_cost %></div>
+<%= render 'table', suplement: @suplement %>
 
   <%= link_to "Edit item", edit_suplement_path(@suplement.id) %>
   <%= link_to 'Delete item', suplement_path(@suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+
 
