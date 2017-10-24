@@ -18,14 +18,6 @@
 
       <%= yield %>
 
-      <div>
-        <% if current_user %>
-        <%= link_to "My Supplements", suplements_path(:user_id => current_user.id) %>
-        <% else %>
-        <%= link_to "Create Your Supplement", new_suplement_path %>
-        <% end %>
-      </div>
-
     </div>
   </body>
 </html>
