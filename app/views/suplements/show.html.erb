@@ -1,8 +1,15 @@
-<h1><%= @suplement.name %> show page</h1>
+<h3 class="heading"><%= @suplement.name %> show page</h3>
 
-<%= render 'table', suplement: @suplement %>
+<div class="form">
+  <%= render 'table', suplement: @suplement %>
+</div>
 
-  <%= link_to "Edit item", edit_suplement_path(@suplement.id) %>
-  <%= link_to 'Delete item', suplement_path(@suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
 
+<div class="create-helper">
+  <%= link_to "Edit", edit_suplement_path(@suplement) %>
+  <%= link_to 'Delete', suplement_path(@suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
 
+<div class="create-helper">
+  <%= create_helper %>
+</div>
