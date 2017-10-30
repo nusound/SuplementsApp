@@ -4,7 +4,6 @@
   <%= render 'table', suplement: @suplement %>
 </div>
 
-
 <div class="create-helper">
   <%= link_to "Edit", edit_suplement_path(@suplement) %>
   <%= link_to 'Delete', suplement_path(@suplement), method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -21,20 +21,29 @@ body {
 }
 
 #helper a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#helper a:hover {
   color: #f2f1cb;
+  text-decoration: none;
 }
 
 nav.navbar {
   background-color: #273259
 }
 
-.navbar ul.navbar-nav li.nav-item a.nav-link {
-  color: white;
+nav.navbar li:active {
+  color: #f2f1cb;
 }
 
 .heading {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.heading a {
+  text-decoration: none;
 }
 
 p {
@@ -45,6 +54,10 @@ p {
 .create-helper {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.create-helper a {
+  text-decoration: none;
 }
 
 .form {

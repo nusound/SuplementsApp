@@ -24,11 +24,11 @@
       </tr>
       <tr>
         <td>Supplement cost:</td>
-        <td><%= suplement.suplement_cost %></td>
+        <td><%= suplement.suplement_cost.round(2) %></td>
       </tr>
       <tr>
         <td>Total cost:</td>
-        <td><%= suplement.total_cost %></td>
+        <td><%= suplement.total_cost.round(2) %></td>
       </tr>
     </tbody>
   </table>
@@ -39,7 +39,7 @@
   <% end %>
 </div>
 
-<div class="create">
+<div class="create-helper">
   <%= link_to "Create New Supplement", new_suplement_path %>
   <% end %>
 </div>
