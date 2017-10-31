@@ -18,11 +18,11 @@
     </tr>
     <tr>
       <td>Supplement cost:</td>
-      <td><%= @suplement.suplement_cost %></td>
+      <td><%= number_to_currency(@suplement.suplement_cost) %></td>
     </tr>
     <tr>
       <td>Total cost:</td>
-      <td><%= @suplement.total_cost %></td>
+      <td><%= number_to_currency(@suplement.total_cost) %></td>
     </tr>
   </tbody>
 </table>
