@@ -15,7 +15,6 @@
 
 body {
   background-image: url(/assets/4.jpg);
-  background-repeat: no-repeat;
   background-size: 100%;
   color: #273259;
 }
@@ -26,7 +25,7 @@ nav.navbar {
 
 .navbar-dark .navbar-nav .nav-link,
 .navbar-nav a {
-    color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .navbar-nav a:hover {
@@ -35,7 +34,7 @@ nav.navbar {
 }
 
 .navbar-custom .nav-item:hover .nav-link {
-    color: #f2f1cb;
+  color: #f2f1cb;
 }
 
 .heading {
@@ -84,4 +83,8 @@ p {
 
 .del-edit a {
   text-decoration: none;
+}
+
+.active a {
+  color: #f2f1cb;
 }

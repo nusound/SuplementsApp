@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def login_helper
     if current_user
       link_to 'Logout', destroy_user_session_path, method: :delete
@@ -14,5 +15,9 @@ module ApplicationHelper
     else
       link_to "Create Your Supplement", new_suplement_path
     end
+  end
+
+  def is_active?(link_path)
+    current_page?(link_path) ? "active" : ""
   end
 end
