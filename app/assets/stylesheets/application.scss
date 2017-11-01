@@ -20,26 +20,28 @@ body {
   color: #273259;
 }
 
-#helper a {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-#helper a:hover {
-  color: #f2f1cb;
-  text-decoration: none;
-}
-
 nav.navbar {
   background-color: #273259
 }
 
-nav.navbar li:active {
+.navbar-dark .navbar-nav .nav-link,
+.navbar-nav a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-nav a:hover {
   color: #f2f1cb;
+  text-decoration: none;
+}
+
+.navbar-custom .nav-item:hover .nav-link {
+    color: #f2f1cb;
 }
 
 .heading {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .heading a {
@@ -54,17 +56,32 @@ p {
 .create-helper {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .create-helper a {
   text-decoration: none;
+  font-size: 1.3em;
 }
 
 .form {
-  max-width: 400px;
+  max-width: 500px;
   text-align: left;
 }
 
 .form-group {
   max-width: 400px;
+}
+
+.table {
+  margin: 0 auto;
+}
+
+.del-edit {
+  text-align: center;
+  margin-top: 7px;
+}
+
+.del-edit a {
+  text-decoration: none;
 }
