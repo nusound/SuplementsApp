@@ -1,43 +1,63 @@
 <%= form_for(suplement) do |f| %>
   <% if suplement.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(suplement.errors.count, "error") %> prohibited this suplement from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(suplement.errors.count, "error") %> prohibited this suplement from being saved:</h2>
 
-      <ul>
-      <% suplement.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <ul>
+    <% suplement.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
-  <div class="field">
+<div class="form-group">
+  <div>
     <%= f.label :name %>
-    <%= f.text_field :name %>
   </div>
+  <div class="col-lg-9">
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+</div>
 
-  <div class="field">
+<div class="form-group">
+  <div>
     <%= f.label :number_of_units %>
-    <%= f.text_field :number_of_units %>
   </div>
+  <div class="col-sm-4">
+    <%= f.text_field :number_of_units, class: 'form-control' %>
+  </div>
+</div>
 
-  <div class="field">
+<div class="form-group">
+  <div>
     <%= f.label :daily_dosage_in_units %>
-    <%= f.text_area :daily_dosage_in_units %>
   </div>
+  <div class="col-sm-4">
+    <%= f.text_field :daily_dosage_in_units, class: 'form-control' %>
+  </div>
+</div>
 
-  <div class="field">
+<div class="form-group">
+  <div>
     <%= f.label :number_of_days %>
-    <%= f.text_area :number_of_days %>
   </div>
+  <div class="col-sm-4">
+    <%= f.text_field :number_of_days, class: 'form-control' %>
+  </div>
+</div>
 
-  <div class="field">
+<div class="form-group">
+  <div>
     <%= f.label :suplement_cost %>
-    <%= f.text_area :suplement_cost %>
   </div>
+  <div class="col-sm-4">
+    <%= f.text_field :suplement_cost, class: 'form-control' %>
+  </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="actions ">
+  <%= f.submit  class: 'btn btn-primary' %>
+</div>
 
 <% end %>

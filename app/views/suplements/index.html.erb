@@ -4,34 +4,34 @@
 
   <p class="create-helper"><%= link_to suplement.name, suplement_path(suplement) %></p>
 
-  <table class="table table-bordered form">
-    <tbody>
-      <tr>
-        <td>Name:</td>
-        <td><%= suplement.name %></td>
-      </tr>
-      <tr>
-        <td>Number of units:</td>
-        <td><%= suplement.number_of_units %></td>
-      </tr>
-      <tr>
-        <td>Daily dosage in units:</td>
-        <td><%= suplement.daily_dosage_in_units %></td>
-      </tr>
-      <tr>
-        <td>Number of days:</td>
-        <td><%= suplement.number_of_days %></td>
-      </tr>
-      <tr>
-        <td>Supplement price:</td>
-        <td><%= number_to_currency(suplement.suplement_cost) %></td>
-      </tr>
-      <tr>
-        <td>Total cost:</td>
-        <td><%= number_to_currency(suplement.total_cost) %></td>
-      </tr>
-    </tbody>
-  </table>
+<table class="table table-bordered form">
+  <tbody>
+    <tr>
+      <td>Name:</td>
+      <td><%= suplement.name %></td>
+    </tr>
+    <tr>
+      <td>Number of units:</td>
+      <td><%= suplement.number_of_units %></td>
+    </tr>
+    <tr>
+      <td>Daily dosage in units:</td>
+      <td><%= suplement.daily_dosage_in_units %></td>
+    </tr>
+    <tr>
+      <td>Number of days:</td>
+      <td><%= suplement.number_of_days %></td>
+    </tr>
+    <tr>
+      <td>Supplement price:</td>
+      <td><%= number_to_currency(suplement.suplement_cost) %></td>
+    </tr>
+    <tr>
+      <td>Total cost:</td>
+      <td><%= number_to_currency(suplement.total_cost) %></td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="del-edit">
   <%= link_to "Edit", edit_suplement_path(suplement) %> <br>
