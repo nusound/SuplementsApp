@@ -56,5 +56,3 @@ gem 'devise', '~> 4.3'
 gem 'money-rails', '~> 1.9'
 gem 'bootstrap', '~> 4.0.0.beta2'
 gem 'jquery-rails'
-
-ruby '2.4.0'
