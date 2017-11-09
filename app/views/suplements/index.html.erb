@@ -1,6 +1,6 @@
 <h2 class="heading">My Supplements</h2>
 
-  <%= if @suplement.each do |suplement| %>
+  <%= if @suplements.each do |suplement| %>
 
   <p class="create-helper"><%= link_to suplement.name, suplement_path(suplement) %></p>
 
@@ -33,13 +33,21 @@
   </tbody>
 </table>
 
+  <div class="del-edit">
+    <%= link_to "Edit", edit_suplement_path(suplement) %> <br>
+    <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+
+
+<% end %>
 <div class="del-edit">
-  <%= link_to "Edit", edit_suplement_path(suplement) %> <br>
-  <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
+<% if @suplement.nil? %>
+<%= "You haven't created any suplements yet." %>
+<% end %>
+
 </div>
 
 <div class="create-helper">
   <%= link_to "Create New Supplement", new_suplement_path %>
-  <% end %>
 </div>
