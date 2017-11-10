@@ -2,7 +2,7 @@
 
   <%= if @suplements.each do |suplement| %>
 
-  <p class="create-helper"><%= link_to suplement.name, suplement_path(suplement) %></p>
+  <h6 class="create-helper"><%= link_to suplement.name, suplement_path(suplement) %></h6>
 
 <table class="table table-bordered form">
   <tbody>
@@ -37,15 +37,13 @@
     <%= link_to "Edit", edit_suplement_path(suplement) %> <br>
     <%= link_to 'Delete', suplement_path(suplement), method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
+  <% end %>
 <% end %>
 
-
-<% end %>
 <div class="del-edit">
-<% if @suplement.nil? %>
-<%= "You haven't created any suplements yet." %>
-<% end %>
-
+  <% if @suplements.blank? %>
+    <%= "You haven't created any suplements yet." %>
+  <% end %>
 </div>
 
 <div class="create-helper">
